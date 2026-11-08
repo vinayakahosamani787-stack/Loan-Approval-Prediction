@@ -1,4 +1,5 @@
-# 🏦 LoanWise – Loan Approval Prediction System
+
+ 🏦 LoanWise – Loan Approval Prediction System
 
 An AI-powered Loan Approval Prediction System built using Python and Machine Learning. This project predicts whether a loan application is likely to be approved or rejected based on applicant details.
 
