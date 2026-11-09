@@ -140,13 +140,13 @@ Loan-Approval-Prediction/
 │   │   ├── 2.png
 │   │   └── 3.png
 │   │
-│   ├── Loan_Approval/
+│   ├── Loan_Approved/
 │   │   ├── 1.png
 │   │   ├── 1c.png
 │   │   ├── 2.png
 │   │   └── 2c.png
 │   │
-│   └── Loan_Rejection/
+│   └── Loan_Rejected/
 │       ├── 1R.png
 │       └── 1Rc.png
 │
