@@ -1,78 +1,59 @@
- 🏦 LoanWise – AI Loan Approval Prediction System
+# 🏦 LoanWise – Loan Approval Prediction System
 
-An AI-powered Loan Approval Prediction System built using **Python, Scikit-learn, and Streamlit**. LoanWise predicts whether a loan application is likely to be approved or rejected based on applicant information using machine learning.
+A Machine Learning-based web application that predicts whether a loan application will be **Approved or Rejected** based on applicant information.
 
-🚀 **Live Demo:** [Open LoanWise App](YOUR_STREAMLIT_APP_URL)
+Built using Python, Scikit-learn, and Streamlit, LoanWise provides an interactive interface for loan approval prediction.
 
 ---
 
- 📌 Project Overview
+## 📌 Project Overview
 
-LoanWise is a machine learning classification project designed to predict loan approval outcomes.
+Loan approval is an important process in the banking and financial industry. Evaluating loan applications involves analyzing several applicant details, including income, credit history, loan amount, and other financial information.
 
-The system analyzes applicant details such as income, education, marital status, credit history, loan amount, and property area to generate predictions.
+This project uses Machine Learning classification algorithms to predict loan approval outcomes.
 
-The project covers the complete machine learning workflow, including data preprocessing, exploratory data analysis, model training, model evaluation, and deployment through an interactive Streamlit web application.
+Two Machine Learning algorithms were implemented and evaluated:
 
- ✨ Features
+- Logistic Regression
+- Random Forest Classifier
 
-- AI-powered loan approval prediction.
-- Interactive web application using Streamlit.
-- Data cleaning and preprocessing.
-- Exploratory Data Analysis (EDA) with visualizations.
+After comparing their performance, Logistic Regression was selected as the final prediction model.
+
+---
+
+## ✨ Features
+
+- Interactive and user-friendly Streamlit interface.
+- Loan approval and rejection prediction.
 - Logistic Regression and Random Forest model comparison.
-- Model evaluation using Accuracy, Precision, Recall, and F1-score.
-- Saved machine learning model for predictions.
-- Deployed online using Streamlit Community Cloud.
+- Data preprocessing and exploratory data analysis.
+- Machine Learning model evaluation.
+- Instant prediction results.
+- Organized application screenshots.
 
- 🛠️ Technologies Used
+---
+
+## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| Python | Programming language |
-| Pandas | Data manipulation |
-| NumPy | Numerical computing |
-| Matplotlib | Data visualization |
-| Seaborn | Statistical visualization |
-| Scikit-learn | Machine learning |
-| Streamlit | Web application |
-| Joblib | Model serialization |
-| Git & GitHub | Version control |
+| Python | Programming Language |
+| Pandas | Data Manipulation |
+| NumPy | Numerical Computing |
+| Matplotlib | Data Visualization |
+| Seaborn | Statistical Visualization |
+| Scikit-learn | Machine Learning |
+| Streamlit | Web Application |
+| Joblib | Model Serialization |
+| Git & GitHub | Version Control |
 
- 📂 Project Structure
+---
 
-```text
-Loan-Approval-Prediction/
-│
-├── dataset/
-│   └── loan_data.csv
-│
-├── notebooks/
-│   ├── loan_approval_distribution.png
-│   ├── education_distribution.png
-│   ├── applicant_income_distribution.png
-│   └── credit_history_vs_approval.png
-│
-├── models/
-│   └── best_model.pkl
-│
-├── train.py
-├── eda.py
-├── preprocessing.py
-├── app.py
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
+## 🤖 Machine Learning Models
 
- 🤖 Machine Learning Models
+Two classification algorithms were trained and evaluated.
 
-Two classification algorithms were trained and evaluated:
-
-1. Logistic Regression
-2. Random Forest Classifier
-
- 📊 Model Performance
+### Model Performance Comparison
 
 | Evaluation Metric | Logistic Regression | Random Forest |
 |---|---:|---:|
@@ -81,45 +62,141 @@ Two classification algorithms were trained and evaluated:
 | Recall | 98.82% | 90.59% |
 | F1-Score | 90.81% | 87.50% |
 
-**Selected Model: Logistic Regression**
+### Selected Model: Logistic Regression
 
-Logistic Regression was selected based on its F1-score for the approved class.
+Logistic Regression was selected as the final model because it achieved:
 
-*Note: These results are based on a single test split and do not guarantee performance on unseen applications.*
+- Higher accuracy.
+- Higher recall.
+- Higher F1-score.
 
- 🚀 Installation and Setup
+The trained model is saved using Joblib and integrated into the Streamlit application.
 
- 1. Clone the repository
+---
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+## 📸 Application Screenshots
+
+### 🏠 Home Page
+
+**Screen 1**
+
+![Home Screen 1](screenshots/Home/1.png)
+
+**Screen 2**
+
+![Home Screen 2](screenshots/Home/2.png)
+
+**Screen 3**
+
+![Home Screen 3](screenshots/Home/3.png)
+
+### ✅ Loan Approval Prediction
+
+**Screen 1**
+
+![Loan Approval Screen 1](screenshots/Loan_Approval/1.png)
+
+**Screen 1 – Continuation**
+
+![Loan Approval Screen 1 Continuation](screenshots/Loan_Approval/1c.png)
+
+**Screen 2**
+
+![Loan Approval Screen 2](screenshots/Loan_Approval/2.png)
+
+**Screen 2 – Continuation**
+
+![Loan Approval Screen 2 Continuation](screenshots/Loan_Approval/2c.png)
+
+### ❌ Loan Rejection Prediction
+
+**Screen 1**
+
+![Loan Rejection Screen 1](screenshots/Loan_Rejection/1R.png)
+
+**Screen 1 – Continuation**
+
+![Loan Rejection Screen 1 Continuation](screenshots/Loan_Rejection/1Rc.png)
+
+---
+
+## 📂 Project Structure
+
+```text
+Loan-Approval-Prediction/
+│
+├── dataset/
+│   └── loan_data.csv
+│
+├── models/
+│   └── best_model.pkl
+│
+├── notebooks/
+│
+├── screenshots/
+│   │
+│   ├── Home/
+│   │   ├── 1.png
+│   │   ├── 2.png
+│   │   └── 3.png
+│   │
+│   ├── Loan_Approval/
+│   │   ├── 1.png
+│   │   ├── 1c.png
+│   │   ├── 2.png
+│   │   └── 2c.png
+│   │
+│   └── Loan_Rejection/
+│       ├── 1R.png
+│       └── 1Rc.png
+│
+├── app.py
+├── train.py
+├── eda.py
+├── preprocessing.py
+├── requirements.txt
+└── README.md
 ```
 
- 2. Navigate to the project directory
+---
+
+## ⚙️ Installation and Setup
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/vinayakahosamani787-stack/Loan-Approval-Prediction.git
+```
+
+### 2. Navigate to the Project Directory
 
 ```bash
 cd Loan-Approval-Prediction
 ```
 
- 3. Create a virtual environment
+### 3. Create a Virtual Environment
 
 ```bash
-py -m venv venv
+python -m venv venv
 ```
 
- 4. Activate the virtual environment (Windows PowerShell)
+### 4. Activate the Virtual Environment
 
-```powershell
-.\venv\Scripts\Activate.ps1
+**Windows:**
+
+```bash
+venv\Scripts\activate
 ```
 
- 5. Install dependencies
+### 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
- 6. Run the application
+### 6. Run the Application
 
 ```bash
 streamlit run app.py
@@ -127,72 +204,59 @@ streamlit run app.py
 
 The application will open in your default web browser.
 
- 🧠 Train the Model
+---
 
-To train and evaluate the machine learning models again, execute:
+## 🔄 Model Training
+
+To train the Machine Learning models again, execute:
 
 ```bash
 python train.py
 ```
 
-The selected trained model will be saved in:
-
-```text
-models/best_model.pkl
-```
-
- 📈 Exploratory Data Analysis
-
-The project includes visualizations covering:
-
-- Loan approval distribution.
-- Education distribution.
-- Applicant income distribution.
-- Credit history versus loan approval.
-
- 🧪 Application Testing
-
-The deployed application was tested using three sample scenarios:
-
-| Test Case | Expected Scenario | Observed Prediction |
-|---|---|---|
-| Test 1 | Loan Approval | Approved (Y) |
-| Test 2 | Loan Rejection | Rejected (N) |
-| Test 3 | Loan Approval | Approved (Y) |
-
-All three sample test cases produced the expected predictions.
-
- 📚 Dataset
-
-**Dataset:** Loan Prediction Problem Dataset.
-
-The dataset contains applicant information, including:
-
-- Gender
-- Marital status
-- Dependents
-- Education
-- Applicant income
-- Co-applicant income
-- Loan amount
-- Credit history
-- Property area
-
-**Target Variable: `Loan_Status`**
-
-- `Y` – Loan Approved
-- `N` – Loan Rejected
-
- ⚠️ Disclaimer
-
-This project is developed for educational and demonstration purposes only. Predictions are generated by a machine learning model and do not represent actual bank decisions or guarantees of loan approval.
-
-The model may reflect limitations or biases present in its training dataset.
-
- 👨‍💻 Author
-
-Developed as a Machine Learning and AI project using Python, Scikit-learn, and Streamlit.
+The trained model will be saved in the models directory.
 
 ---
 
-⭐ If you find this project useful, consider giving the repository a star!
+## 📊 Evaluation Metrics
+
+The following evaluation metrics were used:
+
+- **Accuracy:** Measures the overall percentage of correct predictions.
+- **Precision:** Measures the proportion of positive predictions that are correct.
+- **Recall:** Measures the proportion of actual positive cases correctly identified.
+- **F1-Score:** Represents the balance between precision and recall.
+
+---
+
+## 🎯 Project Objective
+
+The main objective of LoanWise is to demonstrate how Machine Learning can be applied to financial decision-support systems.
+
+The project covers the complete Machine Learning workflow:
+
+1. Data collection and preprocessing.
+2. Exploratory Data Analysis.
+3. Model training.
+4. Model evaluation and comparison.
+5. Final model selection.
+6. Streamlit application development.
+7. Loan approval prediction.
+
+**Disclaimer:** This project is developed for educational purposes. Predictions should not be considered actual financial or lending decisions.
+
+---
+
+## 👨‍💻 Author
+
+**LoanWise – Loan Approval Prediction System**
+
+GitHub Repository:
+
+[Loan-Approval-Prediction](https://github.com/vinayakahosamani787-stack/Loan-Approval-Prediction)
+
+---
+
+## ⭐ Support
+
+If you find this project useful, please consider giving the repository a ⭐ on GitHub!
