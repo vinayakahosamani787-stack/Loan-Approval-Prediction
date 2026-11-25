@@ -3,20 +3,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# ==========================================
-# PAGE CONFIGURATION
-# ==========================================
-
 st.set_page_config(
     page_title="LoanWise | AI Loan Intelligence",
     page_icon="💎",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-
-# ==========================================
-# PREMIUM CUSTOM CSS
-# ==========================================
 
 st.markdown("""
 <style>
@@ -288,6 +280,17 @@ div[data-testid="stFormSubmitButton"] button p {
     color: #414b5e;
 }
 
+/* PROFESSIONAL RESULT NOTE */
+.result-note {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #d5dbea;
+    color: #526078 !important;
+    font-size: 13px !important;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
 /* DIVIDERS */
 hr {
     border-color: #343c4d !important;
@@ -371,6 +374,7 @@ with col3:
 
 
 st.write("")
+
 st.markdown(
     '<div class="section-title">✦ Loan Application</div>',
     unsafe_allow_html=True
@@ -514,6 +518,9 @@ if submit_button:
                     belongs to the approved category.
                 </p>
                 <h3>RESULT: Y</h3>
+                <p class="result-note">
+                    ✦ AI-powered prediction based on applicant details.
+                </p>
             </div>
             """, unsafe_allow_html=True)
 
@@ -527,13 +534,11 @@ if submit_button:
                     belongs to the rejected category.
                 </p>
                 <h3>RESULT: N</h3>
+                <p class="result-note">
+                    ✦ AI-powered prediction based on applicant details.
+                </p>
             </div>
             """, unsafe_allow_html=True)
-
-        st.caption(
-            "This is a machine-learning prediction, "
-            "not an actual bank decision."
-        )
 
     except Exception as e:
         st.error(f"Prediction error: {e}")
